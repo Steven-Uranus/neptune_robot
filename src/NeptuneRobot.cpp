@@ -1,8 +1,8 @@
-#include "legged_template_controller/TemplateController.h"
+#include "neptune_robot/NeptuneRobot.h"
 
 namespace legged {
-bool TemplateController::parserObservation(const std::string& name) {
-  std::cerr << "TemplateController::parserObservation got called with name: " << name << std::endl;
+bool NeptuneRobot::parserObservation(const std::string& name) {
+  std::cerr << "NeptuneRobot::parserObservation got called with name: " << name << std::endl;
   if (OnnxController::parserObservation(name)) {
     return true;
   }
@@ -18,4 +18,4 @@ bool TemplateController::parserObservation(const std::string& name) {
 
 #include "pluginlib/class_list_macros.hpp"
 
-PLUGINLIB_EXPORT_CLASS(legged::TemplateController, controller_interface::ControllerInterface)
+PLUGINLIB_EXPORT_CLASS(legged::NeptuneRobot, controller_interface::ControllerInterface)
